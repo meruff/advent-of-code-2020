@@ -1,0 +1,24 @@
+minimum_cumulusci_version: '3.24.1'
+project:
+    name: adventOfCode2020
+    package:
+        name: adventOfCode2020
+        api_version: '50.0'
+    git:
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/adventOfCode2020/tests
+            options:
+                outputdir: robot/adventOfCode2020/results
+
+    robot_testdoc:
+        options:
+            path: robot/adventOfCode2020/tests
+            output: robot/adventOfCode2020/doc/adventOfCode2020_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
